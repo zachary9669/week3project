@@ -7,3 +7,22 @@ recipe organizer
 
 API: https://developer.edamam.com/edamam-docs-recipe-api 
 
+package api;
+
+import entity.Grade;
+import entity.Team;
+import okhttp3.*;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.util.Arrays;
+
+public class MongoGradeDB implements GradeDB {
+    private static final String API_URL = "https://developer.edamam.com/edamam-docs-recipe-api";
+    // load API_TOKEN from env variable.
+    private static final String API_TOKEN = System.getenv("API_TOKEN");
+
+    public static String getApiToken() {
+        return API_TOKEN;

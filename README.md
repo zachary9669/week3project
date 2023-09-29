@@ -9,7 +9,7 @@ API: https://developer.edamam.com/edamam-docs-recipe-api
 
 package api;
 
-'import entity.Grade;
+import entity.Grade;
 import entity.Team;
 import okhttp3.*;
 import org.json.JSONArray;
@@ -25,4 +25,4 @@ public class MongoGradeDB implements GradeDB {
     private static final String API_TOKEN = System.getenv("API_TOKEN");
 
     public static String getApiToken() {
-        return API_TOKEN;'
+        return API_TOKEN;
